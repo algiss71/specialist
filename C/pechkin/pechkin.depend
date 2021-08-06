@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1628169211 source:f:\с++\[Специалист] Программирование на языке c [2011] [rus] [splitted]\pechkin\main.c
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+

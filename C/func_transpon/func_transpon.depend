@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1628229244 source:f:\с++\[Специалист] Программирование на языке c [2011] [rus] [splitted]\func_transpon\main.c
+	<stdio.h>
+	<stdlib.h>
+	<stdarg.h>
+	<string.h>
+
