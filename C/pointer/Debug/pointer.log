@@ -1,0 +1,14 @@
+﻿  main.c
+E:\001\specialist\C\pointer\main.c(34,7): warning C4133: =: несовместимые типы - из "int *" в "char *"
+E:\001\specialist\C\pointer\main.c(38,9): warning C4133: ==: несовместимые типы - из "char *" в "int *"
+E:\001\specialist\C\pointer\main.c(39,9): warning C4133: !=: несовместимые типы - из "char *" в "int *"
+E:\001\specialist\C\pointer\main.c(40,9): warning C4133: >: несовместимые типы - из "char *" в "int *"
+E:\001\specialist\C\pointer\main.c(41,9): warning C4133: <: несовместимые типы - из "char *" в "int *"
+E:\001\specialist\C\pointer\main.c(58,23): warning C4477: "printf": в строке форматирования "%d" требуется аргумент типа "int", но вариативный аргумент "3" имеет тип "int *"
+E:\001\specialist\C\pointer\main.c(60,23): warning C4477: "printf": в строке форматирования "%d" требуется аргумент типа "int", но вариативный аргумент "3" имеет тип "int *"
+E:\001\specialist\C\pointer\main.c(62,23): warning C4477: "printf": в строке форматирования "%d" требуется аргумент типа "int", но вариативный аргумент "3" имеет тип "int *"
+E:\001\specialist\C\pointer\main.c(64,23): warning C4477: "printf": в строке форматирования "%d" требуется аргумент типа "int", но вариативный аргумент "3" имеет тип "int *"
+E:\001\specialist\C\pointer\main.c(66,23): warning C4477: "printf": в строке форматирования "%d" требуется аргумент типа "int", но вариативный аргумент "3" имеет тип "int *"
+E:\001\specialist\C\pointer\main.c(68,23): warning C4477: "printf": в строке форматирования "%d" требуется аргумент типа "int", но вариативный аргумент "3" имеет тип "int *"
+E:\001\specialist\C\pointer\main.c(70,23): warning C4477: "printf": в строке форматирования "%d" требуется аргумент типа "int", но вариативный аргумент "3" имеет тип "int *"
+  pointer.vcxproj -> E:\001\specialist\C\pointer\Debug\pointer.exe

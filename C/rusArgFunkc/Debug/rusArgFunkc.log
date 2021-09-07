@@ -1,0 +1,3 @@
+﻿  main.c
+E:\001\specialist\C\rusArgFunkc\main.c(17,9): warning C4101: i: неиспользованная локальная переменная
+  rusArgFunkc.vcxproj -> E:\001\specialist\C\rusArgFunkc\Debug\rusArgFunkc.exe

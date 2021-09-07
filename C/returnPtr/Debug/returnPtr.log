@@ -1,0 +1,5 @@
+﻿  main.c
+E:\001\specialist\C\returnPtr\main.c(20,22): warning C4013: malloc: нет определения; предполагается "extern" с возвратом типа "int"
+E:\001\specialist\C\returnPtr\main.c(20,35): warning C4047: return: "int *" отличается по уровням косвенного обращения от "int"
+E:\001\specialist\C\returnPtr\main.c(12): warning C4172: возвращение адреса локальной или временной переменной : local_var
+  returnPtr.vcxproj -> E:\001\specialist\C\returnPtr\Debug\returnPtr.exe

@@ -1,0 +1,9 @@
+﻿  main.c
+E:\001\specialist\C\vvodSort\main.c(21,6): warning C4013: gets: нет определения; предполагается "extern" с возвратом типа "int"
+E:\001\specialist\C\vvodSort\main.c(22,24): warning C4047: функция: "char" отличается по уровням косвенного обращения от "char [256]"
+E:\001\specialist\C\vvodSort\main.c(22,21): warning C4024: PutName: различные типы для формального и фактического параметров 2
+E:\001\specialist\C\vvodSort\main.c(52,31): warning C4047: функция: "const char *" отличается по уровням косвенного обращения от "char"
+E:\001\specialist\C\vvodSort\main.c(52,28): warning C4024: strlen: различные типы для формального и фактического параметров 1
+E:\001\specialist\C\vvodSort\main.c(53,16): warning C4047: функция: "const char *" отличается по уровням косвенного обращения от "char"
+E:\001\specialist\C\vvodSort\main.c(53,13): warning C4024: strcpy: различные типы для формального и фактического параметров 2
+  vvodSort.vcxproj -> E:\001\specialist\C\vvodSort\Debug\vvodSort.exe
