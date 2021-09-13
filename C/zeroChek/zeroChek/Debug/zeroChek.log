@@ -1,0 +1,4 @@
+﻿  main.c
+C:\Users\User\Documents\c++\specialist\C\zeroChek\zeroChek\main.c(63,20): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\User\Documents\c++\specialist\C\zeroChek\zeroChek\main.c(75,20): warning C4018: <: несоответствие типов со знаком и без знака
+  zeroChek.vcxproj -> C:\Users\User\Documents\c++\specialist\C\zeroChek\Debug\zeroChek.exe
