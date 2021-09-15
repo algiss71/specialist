@@ -3,70 +3,108 @@
 #include <stdlib.h>
 #include<string.h>
 
+
+void strcopy(char* t, const char* s);
+void zero_chek(char A[], int N);
 void str_int_rev(int A[], const char* s, int N, int k);
 void int_str_rev(int A[], char* s, int N);
-void sum(int A[], int B[], int N);
+//void sum(int A[], int B[], int *N);
 void print_arr(int A[], int N);
 
+char* strsum(const char* aS, const char* bS)
+{
+    const int aN = strlen(aS); const int bN = strlen(bS);
+    char* str = (char*)malloc((aN) * sizeof(char));
+    char* str1 = (char*)malloc((bN) * sizeof(char));
+    strcopy(str, aS); strcopy(str1, bS);
+    int l, la, lb, k;
+    char* zero = "0";
+    la = strlen(str); lb = strlen(str1);
+    zero_chek(str, la);  zero_chek(str1, lb);
+    la = strlen(str); lb = strlen(str1);
+    
+    printf("str = %s\n", str); printf("str1 = %s\n", str1);
+    printf("la = %d\n", la); printf("lb = %d\n", lb);
+    
+    if (la ==0 && lb == 0)  return zero;
+    
+    l = la + 1;
+    
+    if (la >= lb)
+    {
+        k = la - lb;
+        int* a = (int*)calloc(l, sizeof(int));
+        int* b = (int*)calloc(l, sizeof(int));
+        char* s = (char*)calloc(l, sizeof(char));
+        print_arr(a, l); print_arr(b, l);
+                
+        str_int_rev(a, str, l, 0); str_int_rev(b, str1, l, k);
+        print_arr(a, l); print_arr(b, l);
+        for (int ix = 0; ix < l; ix++)
+        {
+            b[ix] += a[ix]; b[ix + 1] += (b[ix] / 10); b[ix] %= 10;
+        }
+        if (b[l - 1] == 0) l--;
+        print_arr(b, l);
+        //printf("k = % d\n", k);
+        int_str_rev(b, s, l);
+        printf("sF = %s\n", s);
+        return s;
+
+    }
+
+    if (lb > la)
+    {
+        k = lb - la;
+        l = lb + 1;
+        int* a = (int*)calloc(l, sizeof(int));
+        int* b = (int*)calloc(l, sizeof(int));
+        char* s = (char*)calloc(l, sizeof(char));
+        
+        str_int_rev(a, str, l, k); str_int_rev(b, str1, l, 0);
+        
+        for (int ix = 0; ix < l; ix++)
+        {
+            b[ix] += a[ix]; b[ix + 1] += (b[ix] / 10); b[ix] %= 10;
+        }
+        if (b[l - 1] == 0) l--;
+        printf("k = % d\n", k);
+        int_str_rev(b, s, l);
+        printf("sF = %s\n", s);
+        return s;
+
+    }
+        
+}
 
 int main()
 {
-    char str[100], str1[100];
-    int l, la, lb, k;
-
+    char str[1024], str1[1024];
     printf("Enter 1 value: "); scanf("%100s", str);
     printf("Enter 2 value: "); scanf("%100s", str1);
-
-    la = strlen(str); lb = strlen(str1);
-
-    if (la == lb)
-    {
-        l = la + 1;
-        k = 0;
-        int* a = (int*)calloc(l, sizeof(int));
-        int* b = (int*)calloc(l, sizeof(int));
-        char* s = (char*)calloc(l, sizeof(char));
-        str_int_rev(a, str, l, k); str_int_rev(b, str1, l, k);
-        sum(a, b, l);
-        int_str_rev(b, s, l); printf("%s\n", s);
-    }
-    if (la > lb)
-    {
-        l = la + 1;
-        k = la - lb;
-
-        int* a = (int*)calloc(l, sizeof(int));
-        int* b = (int*)calloc(l, sizeof(int));
-        char* s = (char*)calloc(l, sizeof(char));
-
-        str_int_rev(a, str, l, 0); str_int_rev(b, str1, l, k);
-
-        for (int ix = 0; ix < l; ix++)
-        {
-            b[ix] += a[ix]; b[ix + 1] += (b[ix] / 10); b[ix] %= 10;
-        }
-        int_str_rev(b, s, l); printf("%s\n", s);
-    }
-    if (lb > la)
-    {
-        l = lb + 1; k = lb - la;
-
-        int* a = (int*)calloc(l, sizeof(int));
-        int* b = (int*)calloc(l, sizeof(int));
-        char* s = (char*)calloc(l, sizeof(char));
-
-        str_int_rev(a, str, l, k); str_int_rev(b, str1, l, 0);
-
-        for (int ix = 0; ix < l; ix++)
-        {
-            b[ix] += a[ix]; b[ix + 1] += (b[ix] / 10); b[ix] %= 10;
-        }
-        int_str_rev(b, s, l); printf("%s\n", s);
-
-    }
+    printf("s = %s",strsum(str, str1));
+    system("pause");
 }
 
+void strcopy(char* t, const char* s)
+{
+    while (*t++ = *s++);
+}
 
+void zero_chek(char A[], int N)
+{
+    for (int i = 0; i < N; i++)
+    {
+        if (A[0] == 48)
+        {
+            for (int j = 0; j < N; j++)
+            {
+                A[j] = A[j + 1];
+            }
+            i--;
+        }
+    }
+}
 void str_int_rev(int A[], const char* s, int N, int k)
 {
     for (int i = 1; i < N; i++)
@@ -74,20 +112,13 @@ void str_int_rev(int A[], const char* s, int N, int k)
         if (s[i - 1] != 48)
         {
             A[N - i - 1 - k] = s[i - 1] - 48;
+            //printf("a[%d] = %d\n", i, A[i]);
         }
-
+        
     }
-    print_arr(A, N);
 }
 
-    void sum(int A[], int B[], int N)
-    {
-        for (int ix = 0; ix < N; ix++)
-        {
-            B[ix] += A[ix]; B[ix + 1] += (B[ix] / 10); B[ix] %= 10;
-        }
-        if (B[N - 1] == 0) N--;
-    }
+    
     void int_str_rev(int A[], char* s, int N)
     {
         int i = 0;
