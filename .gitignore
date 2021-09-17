@@ -1,0 +1,22 @@
+﻿################################################################################
+# Данный GITIGNORE-файл был автоматически создан Microsoft(R) Visual Studio.
+################################################################################
+
+*.db-shm
+*.db-wal
+*.idb
+*.log
+*.obj
+*.pdb
+*.lastbuildstate
+*.tlog
+*.vcxproj.filters
+*.sln
+*.vcxproj.user
+*.vcxproj
+*.ipch
+*.db
+*.suo
+*.opendb
+*.exe
+*.ilk
